@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LiveBidsCollectionViewCell" id="gTV-IL-0wX" customClass="LiveBidsCollectionViewCell" customModule="Baddil" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="328" height="114"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="328" height="114"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FcN-pm-rOb" customClass="CustomView" customModule="Baddil" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="328" height="114"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Competing Bid: 100/-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eO-mk-vKa">
+                                <rect key="frame" x="8" y="0.0" width="312" height="114"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <color key="textColor" red="0.12549019607843137" green="0.12549019607843137" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1eO-mk-vKa" firstAttribute="leading" secondItem="FcN-pm-rOb" secondAttribute="leading" constant="8" id="2Oa-el-HhN"/>
+                            <constraint firstAttribute="bottom" secondItem="1eO-mk-vKa" secondAttribute="bottom" id="BQy-MS-e2a"/>
+                            <constraint firstItem="1eO-mk-vKa" firstAttribute="top" secondItem="FcN-pm-rOb" secondAttribute="top" id="OU0-Ye-FUR"/>
+                            <constraint firstAttribute="trailing" secondItem="1eO-mk-vKa" secondAttribute="trailing" constant="8" id="wFf-N2-eVw"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="FcN-pm-rOb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="HNd-SR-rZP"/>
+                <constraint firstItem="FcN-pm-rOb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OLw-OX-yJM"/>
+                <constraint firstAttribute="trailing" secondItem="FcN-pm-rOb" secondAttribute="trailing" id="PBX-7Q-52M"/>
+                <constraint firstAttribute="bottom" secondItem="FcN-pm-rOb" secondAttribute="bottom" id="luA-fN-02Q"/>
+            </constraints>
+            <size key="customSize" width="328" height="114"/>
+            <connections>
+                <outlet property="mainView" destination="FcN-pm-rOb" id="b4q-rL-nF2"/>
+            </connections>
+            <point key="canvasLocation" x="337.68115942028987" y="161.38392857142856"/>
+        </collectionViewCell>
+    </objects>
+</document>

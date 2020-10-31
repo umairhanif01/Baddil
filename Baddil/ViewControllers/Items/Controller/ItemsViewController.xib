@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemsViewController" customModule="Baddil" customModuleProvider="target">
+            <connections>
+                <outlet property="mainView" destination="i5M-Pr-FkT" id="jbP-pz-GGr"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="ItemsView" customModule="Baddil" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="adO-MW-xXz">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACO-Ax-p2k" customClass="CustomButton" customModule="Baddil" customModuleProvider="target">
+                            <rect key="frame" x="40" y="10" width="295" height="40"/>
+                            <color key="backgroundColor" name="AppOrange"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="jUd-tk-UPc"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <state key="normal" title="ENTER LIVE AUCTION">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ACO-Ax-p2k" secondAttribute="bottom" constant="10" id="3LU-Bo-EoV"/>
+                        <constraint firstItem="ACO-Ax-p2k" firstAttribute="top" secondItem="adO-MW-xXz" secondAttribute="top" constant="10" id="Xgy-8w-2fd"/>
+                        <constraint firstAttribute="trailing" secondItem="ACO-Ax-p2k" secondAttribute="trailing" constant="40" id="bp1-Qn-gwT"/>
+                        <constraint firstItem="ACO-Ax-p2k" firstAttribute="leading" secondItem="adO-MW-xXz" secondAttribute="leading" constant="40" id="nVZ-Z9-u1C"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="WQ0-l3-Kg1">
+                    <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tOX-d9-TVI">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="WQ0-l3-Kg1" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="78J-6g-JNZ"/>
+                <constraint firstItem="WQ0-l3-Kg1" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Bfm-C9-fg8"/>
+                <constraint firstItem="adO-MW-xXz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Bvo-UY-CRt"/>
+                <constraint firstItem="adO-MW-xXz" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="GUo-iT-htS"/>
+                <constraint firstItem="WQ0-l3-Kg1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gHe-lM-yRA"/>
+                <constraint firstItem="adO-MW-xXz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="psw-Ea-DKr"/>
+                <constraint firstItem="WQ0-l3-Kg1" firstAttribute="top" secondItem="adO-MW-xXz" secondAttribute="bottom" id="zyu-C4-T2n"/>
+            </constraints>
+            <connections>
+                <outlet property="collectionView" destination="WQ0-l3-Kg1" id="2Y2-1e-I3v"/>
+            </connections>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="ACO-Ax-p2k">
+            <size key="intrinsicContentSize" width="164" height="32"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="AppOrange">
+            <color red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

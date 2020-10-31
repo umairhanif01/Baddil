@@ -1,0 +1,36 @@
+//
+//  HomeView.swift
+//  Baddil
+//
+//  Created by Umair Hanif on 29/10/2020.
+//
+
+import UIKit
+
+class HomeView: UIView {
+
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    
+    
+    /*
+    // Only override draw() if you perform custom drawing.
+    // An empty implementation adversely affects performance during animation.
+    override func draw(_ rect: CGRect) {
+        // Drawing code
+    }
+    */
+    
+    
+    func initCollectionViewCell() {
+        
+        let nib = UINib(nibName: "CompaniesCollectionViewCell", bundle: nil)
+        
+        if let collectionView = collectionView {
+            collectionView.register(nib, forCellWithReuseIdentifier: "CompaniesCollectionViewCell")
+            collectionView.backgroundColor = UIColor.clear.withAlphaComponent(0)
+        }
+        
+    }
+    
+}
